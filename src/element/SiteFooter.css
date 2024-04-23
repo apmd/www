@@ -1,0 +1,14 @@
+footer {
+  /* display: flex; */
+}
+nav {
+  /* display: flex; */
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: var(--sm);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,52 @@
+:host {
+  /* height: 2.5em; */
+}
+a {
+  @apply gap-2;
+  color: var(--color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-basis: min-content;
+  height: 100%;
+  /* flex-wrap: wrap; */
+}
+img {
+  /* height: 6em; */
+  height: 100%;
+  width: auto;
+  font-size: .5rem;
+  color: var(--color-accent);
+}
+
+h1 {
+  @apply text-lg font-normal;
+  margin: 0;
+  line-height: 1;
+  /* display: inline-flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: baseline; */
+  /* word-break: break-all; */
+  /* font-size: var(--text-l); */
+  /* font-weight: var(--font-normal); */
+  /* flex-grow: 0; */
+}
+i {
+  /* display: block; */
+  @apply text-base text-neutral-500;
+  font-style: normal;
+  white-space: pre;
+  /* display: none; */
+  /* display: block; */
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+  /* flex-shrink: 1 */
+}
+
+/* @screen sm {
+  i {
+    display: inline;
+  }
+} */

@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang=en class=index>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Index of <!--#echo var="REQUEST_URI" --></title>
+
+<link rel="stylesheet" href="../main.css">
+
+<site-header></site-header>
+<h1><!--#echo var="REQUEST_URI" --></h1>
+<p>Directory index</p>

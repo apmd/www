@@ -1,0 +1,29 @@
+{
+  "name": "apmd-www",
+  "version": "0.1.0",
+  "description": "appamada website",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css:main": "tailwindcss -i ./src/main.css -o ./dist/main.css",
+    "build:css:site-header": "tailwindcss -i ./src/site-header.css -o ./dist/site-header.css"
+  },
+  "keywords": [
+    "apmd",
+    "appamada",
+    "www"
+  ],
+  "author": "mate@appamada.foundation",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "css-loader": "^6.10.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "postcss-nested": "^6.0.1",
+    "style-loader": "^3.3.4",
+    "tailwindcss": "^3.4.3",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

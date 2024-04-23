@@ -1,0 +1,7 @@
+a {
+  color: var(--color-a);
+  text-decoration: var(--a-decoration);
+}
+a:hover {
+  text-decoration: var(--a-hover-decoration);
+}
