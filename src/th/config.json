@@ -1,0 +1,10 @@
+{
+  "logo": "/img/apmd-logo-line-gradient-green.svg",
+  "title": "อัปปมาทะ",
+  "subtitle": "มูลนิธิ เทคโนโลยี",
+  "navigation": {
+    "header": [{
+      "/วัตถุประสงค์/": "วัตถุประสงค์"
+    }]
+  }
+}

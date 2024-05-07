@@ -1,0 +1,28 @@
+{
+  "logo": {
+    "width": "512",
+    "height": "256",
+    "alt": "Aquamarine colored logotype of rising diagonal in three harmonized waves"
+  },
+  "title": "appamāda",
+  "subtitle": "foundation",
+  "license": {
+    "name": "CC BY",
+    "href": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "navigation": {
+    "header": [
+      {
+        "/objective/": "Objective",
+        "/research/": "Research",
+        "/development/": "Development"
+      }
+    ],
+    "footer": [
+      {
+        "/certificate/": "Certificate",
+        "/minute/": "Minutes"
+      }
+    ]
+  }
+}

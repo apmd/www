@@ -4,9 +4,10 @@
   "description": "appamada website",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css:main": "tailwindcss -i ./src/main.css -o ./dist/main.css",
-    "build:css:site-header": "tailwindcss -i ./src/site-header.css -o ./dist/site-header.css"
+    "build": "webpack",
+    "dev": "webpack --mode development --watch",
+    "image": "docker build -t $npm_package_name:$npm_package_version .",
+    "serve": "docker run --rm -p 80:80 --name $npm_package_name -v ./dist:/usr/local/apache2/htdocs $npm_package_name:$npm_package_version"
   },
   "keywords": [
     "apmd",
@@ -16,7 +17,9 @@
   "author": "mate@appamada.foundation",
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.10.0",
+    "html-bundler-webpack-plugin": "^3.11.0",
     "mini-css-extract-plugin": "^2.8.1",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
