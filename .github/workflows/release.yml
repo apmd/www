@@ -21,7 +21,5 @@ jobs:
       - uses: digitalocean/action-doctl@v2
       #   with:
       #     token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-      - env:
-          NAME: ${{ npm pkg get name }}
-          VERSION: ${{ npm pkg get version }}
-        run: docker build -t registry.digitalocean.com/apmd/$NAME:$VERSION .
+      - run: npm run image:do
+      - run: npm run publish:do
