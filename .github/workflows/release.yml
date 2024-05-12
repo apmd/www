@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 18
       - uses: digitalocean/action-doctl@v2
-      #   with:
-      #     token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - run: npm run image:do
       - run: npm run publish:do
