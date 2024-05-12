@@ -22,6 +22,6 @@ jobs:
       #   with:
       #     token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - env:
-          NAME: ${{ fromJSON(npm pkg get name) }}
-          VERSION: ${{ fromJSON(npm pkg get version) }}
+          NAME: ${{ fromJSON((npm pkg get name)) }}
+          VERSION: ${{ fromJSON((npm pkg get version)) }}
         run: docker build -t registry.digitalocean.com/apmd/$NAME:$VERSION .
