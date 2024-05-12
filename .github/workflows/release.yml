@@ -21,6 +21,7 @@ jobs:
       - uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - run: npm install
       - run: npm run build
       - run: npm run image:do
       - run: npm run publish:do
