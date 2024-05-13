@@ -6,10 +6,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack --mode development --watch",
-    "image": "docker build -t apmd-www:$npm_package_version .",
-    "image:do": "docker build -t registry.digitalocean.com/apmd/apmd-www:$npm_package_version .",
-    "publish:do": "doctl registry login --expiry-seconds 1200 && docker push registry.digitalocean.com/apmd/apmd-www:$npm_package_version",
-    "serve": "docker run --rm -p 80:80 --name apmd-www -v ./dist:/usr/local/apache2/htdocs apmd-www:$npm_package_version"
+    "image": "docker build -t apmd/www .",
+    "serve": "docker run --rm -p 80:80 -v ./dist:/usr/local/apache2/htdocs apmd/www"
   },
   "keywords": [
     "apmd",

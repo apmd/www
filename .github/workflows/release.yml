@@ -7,7 +7,7 @@ on:
     # branches:
       # - main
     # tags:
-    #   - '*'
+    #   - '*.*.*'
 
 jobs:
   push:
@@ -23,5 +23,6 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - run: npm install
       - run: npm run build
-      - run: npm run image:do
-      - run: npm run publish:do
+      - run: docker build -t registry.digitalocean.com/apmd/www .
+      - run: doctl registry login --expiry-seconds 1200
+      - run: docker push registry.digitalocean.com/apmd/www
