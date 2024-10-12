@@ -1,5 +1,5 @@
 header {
-  @apply gap-1;
+  /* @apply gap-1; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -33,7 +33,7 @@ a:hover {
   text-decoration: underline;
 }
 button.menu {
-  @apply py-2 px-1;
+  /* @apply py-2 px-1; */
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -45,7 +45,7 @@ button.menu {
 button.close {
   display: none;
 }
-:host(.open) {
+/* :host(.open) {
   nav {
     display: flex;
   }
@@ -55,8 +55,7 @@ button.close {
   button.close {
     display: block;
   }
-  /* background: red; */
-}
+} */
 
 site-logo {
   flex-basis: min-content;
@@ -64,7 +63,7 @@ site-logo {
 }
 
 select-language::part(select) {
-  @apply py-2 px-0.5;
+  /* @apply py-2 px-0.5; */
   background: var(--bg);
   color: var(--color-neutral);
   border: none;
@@ -73,7 +72,7 @@ select-language::part(select) {
   appearance: none;
   cursor: pointer;
 }
-
+/* 
 @screen sm {
   site-logo {
     flex-basis: fit-content;
@@ -92,4 +91,4 @@ select-language::part(select) {
   button.menu {
     display: none;
   }
-}
+} */

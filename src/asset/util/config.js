@@ -1,18 +1,15 @@
-import { publish } from "./message/publish";
-import { versionParam } from "./versionParam";
+import { publish } from "./message/publish.js";
+import { versionParam } from "./versionParam.js";
 
-function fail() {
-
-}
-
-const version = process.env.npm_package_version;
+const version = 'dev'; // process && process.env && process.env.npm_package_version || 'dev';
 export function fetchConfig() {
-  fetch(versionParam('/config.json', version), {
+  console.log('cnonfig', document.baseURI);
+  fetch(versionParam(new URL('config.json', document.baseURI), version), {
     cache: 'force-cache'
   }).then(async (response) =>
     publish('config', {
       ...await response.json(),
-      version
+      version,
     })
   ).catch(() => 
     publish('config', {

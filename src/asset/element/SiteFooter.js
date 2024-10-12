@@ -1,9 +1,9 @@
 import { createElement } from "../createElement.js";
 import { createNavigation } from "../util/createNavigation.js";
 import { subscribe } from "../util/message/subscribe.js";
-import { toStyleSheet } from "../util/styleSheet.js";
-import css from "./SiteFooter.css";
-import a from "./a.css";
+// import { toStyleSheet } from "../util/styleSheet.js";
+import css from "./SiteFooter.css" assert { type: "css" };
+import a from "./a.css" assert { type: "css" };
 
 const year = new Date().getFullYear();
 
@@ -14,7 +14,7 @@ export default class SiteFooter extends HTMLElement {
   async connectedCallback() {
   
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.adoptedStyleSheets = toStyleSheet(a, css);
+    this.shadowRoot.adoptedStyleSheets = [a, css];
 
     const siteLogo = createElement('site-logo', {
       part: 'logo',

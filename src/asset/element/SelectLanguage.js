@@ -1,5 +1,5 @@
-import { createElement } from "../createElement";
-import { langHrefs } from "../langHref";
+import { createElement } from "../createElement.js";
+import { langHrefs } from "../langHref.js";
 
 const { lang } = document.documentElement;
 

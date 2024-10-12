@@ -1,5 +1,5 @@
-import { isBase, dir } from '../base';
-import { createElement } from '../createElement';
+import { isBase, dir } from '../base.js';
+import { createElement } from '../createElement.js';
 
 export function createBase() {
   // if (!isBase) return;

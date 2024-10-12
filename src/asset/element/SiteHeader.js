@@ -1,9 +1,9 @@
 import { createElement } from "../createElement.js";
 import { subscribe } from "../util/message/subscribe.js";
-import { toStyleSheet } from "../util/styleSheet.js";
+// import { toStyleSheet } from "../util/styleSheet.js";
 import { observe } from "../util/customElement/observe.js";
 import { createNavigation } from "../util/createNavigation.js";
-import css from "./SiteHeader.css";
+import css from "./SiteHeader.css" assert { type: "css" };
 
 export default class SiteHeader extends HTMLElement {
   // template = document.createElement('template');
@@ -20,7 +20,7 @@ export default class SiteHeader extends HTMLElement {
     //   // href: '/site-header.css'
     //   innerHTML: css,
     // });
-    shadow.adoptedStyleSheets = toStyleSheet(css);
+    shadow.adoptedStyleSheets = [css];
 
     const logoElement = createElement('site-logo', {
       part: 'logo'

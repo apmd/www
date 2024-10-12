@@ -1,14 +1,14 @@
 import { createElement } from "../createElement.js";
-import { base, dir } from "../base.js";
+// import { base, dir } from "../base.js";
 import { subscribe } from "../util/message/subscribe.js";
-import { toStyleSheet } from "../util/styleSheet.js";
+// import { toStyleSheet } from "../util/styleSheet.js";
 import { createFavicon } from "../util/createFavicon.js";
-import css from "./SiteLogo.css";
+import css from "./SiteLogo.css" assert { type: "css" };
 import { versionParam } from "../util/versionParam.js";
 
-function createLogo(logo = {}, version) {
+function createLogo(logo = {}, version, base) {
   const {
-    src = versionParam(dir + 'asset/img/logo.svg', version),
+    src = versionParam(new URL('../asset/img/logo.svg', base), version),
     width,
     height,
     alt = '←'
@@ -31,16 +31,17 @@ export default class SiteLogo extends HTMLElement {
     // if (isBase) return;
 
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.adoptedStyleSheets = toStyleSheet(css);
+    this.shadowRoot.adoptedStyleSheets = [css];
 
     subscribe((config) => {
       if (!config) return;
+      const { baseURI } = document;
       const { logo, title, subtitle, version } = config;
       this.shadowRoot.replaceChildren(createElement('a', {
-        href: base,
+        href: baseURI,
         part: 'a',
       }, [
-        createLogo(logo, version),
+        createLogo(logo, version, baseURI),
         title && createElement('h1', {
           part: 'title',
         }, [

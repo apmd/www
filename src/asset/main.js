@@ -1,3 +1,4 @@
+import SiteConfig from './element/SiteConfig.js';
 import SelectLanguage from './element/SelectLanguage.js';
 import SiteHeader from './element/SiteHeader.js';
 import SiteFooter from './element/SiteFooter.js';
@@ -36,6 +37,7 @@ import { createBase } from './util/createBase.js';
 addMessageListeners();
 fetchConfig();
 defineElements({
+  'site-config': SiteConfig,
   'site-logo': SiteLogo,
   'select-language': SelectLanguage,
   'site-header': SiteHeader,

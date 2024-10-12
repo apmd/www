@@ -1,4 +1,4 @@
-import { isFile, indexFile } from "./uri";
+import { isFile, indexFile } from "./uri.js";
 
 const { href, pathname, protocol } = location;
 const { documentElement } = document;

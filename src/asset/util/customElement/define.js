@@ -1,5 +1,5 @@
-import { subscribe } from "../message/subscribe";
-import { observe } from "./observe";
+import { subscribe } from "../message/subscribe.js";
+import { observe } from "./observe.js";
 
 /**
  * @typedef {{ default: CustomElementConstructor}} Module

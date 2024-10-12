@@ -27,6 +27,7 @@ module.exports = (env, argv) => {
       path: dist,
       clean: true,
       chunkFilename: filename + '.js',
+      publicPath: '/',
       // filename: filename + '[ext]',
     },
     plugins: [

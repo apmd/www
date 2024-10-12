@@ -1,7 +1,7 @@
 import { createElement } from "../createElement.js";
-import { toStyleSheet } from "../util/styleSheet.js";
-import a from "../element/a.css";
-import css from "./ContentList.css";
+// import { toStyleSheet } from "../util/styleSheet.js";
+import a from "../element/a.css" assert { type: "css" };
+import css from "./ContentList.css" assert { type: "css" };
 
 export default class ContentList extends HTMLElement {
   constructor() {
@@ -9,7 +9,7 @@ export default class ContentList extends HTMLElement {
   }
   async connectedCallback() {
     const shadow = this.attachShadow({ mode: 'open' });
-    this.shadowRoot.adoptedStyleSheets = toStyleSheet(a, css);
+    this.shadowRoot.adoptedStyleSheets = [a, css];
 
     const headings = document.querySelectorAll('h2, h3, h4');
     const ol = createElement('ol', {
